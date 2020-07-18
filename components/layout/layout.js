@@ -4,7 +4,7 @@ import Link from 'next/link'
 const name = 'Pablo García Egido'
 export const siteTitle = 'Pablo García Egido. Frontend developer'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div className="container">
 
@@ -22,7 +22,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header>
-        <navbar>
+        <div>
           <ul>
             <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/about"><a>About</a></Link></li>
@@ -30,7 +30,7 @@ export default function Layout({ children, home }) {
             <li><Link href="/blog"><a>Blog</a></Link></li>
             <li><Link href="/contact"><a>Contact</a></Link></li>
           </ul>
-        </navbar>
+        </div>
       </header>
 
       <main>{children}</main>
