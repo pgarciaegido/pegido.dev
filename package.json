@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "date-fns": "^2.14.0",
     "express": "^4.17.1",
     "gray-matter": "^4.0.2",
@@ -18,14 +19,21 @@
     "react-dom": "16.13.1",
     "remark": "^12.0.0",
     "remark-html": "^11.0.2",
-    "storyblok-js-client": "^2.5.1"
+    "storyblok-js-client": "^2.5.1",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.1",
     "@testing-library/react": "^10.4.7",
     "babel-jest": "^26.1.0",
+    "husky": "^4.2.5",
     "jest": "^26.1.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
 }

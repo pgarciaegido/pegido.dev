@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Layout from '../components/layout/layout'
-import { getPostsStoryBlok } from '../lib/posts'
 import Landing from '../components/landing/landing'
 
-export default function Home({allPostsData}) {
+import { getCurrentlyReadingBooks } from '../lib/index/index';
+
+export default function Home({books = []}) {
   return (
     <Layout> 
       <Head>
@@ -11,17 +12,17 @@ export default function Home({allPostsData}) {
       </Head>
       <Landing />
 
-      { allPostsData.map((data, index) => <p key={index}>{data.content.title}</p>) }
+      {books.map((book, index) => <p key={index}>{book.name} {book.author}</p>) }
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const res = await getPostsStoryBlok();
+  const books = await getCurrentlyReadingBooks()
 
   return {
     props: {
-      allPostsData: res.data.stories
+      books
     }
   }
 }
