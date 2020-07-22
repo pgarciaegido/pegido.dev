@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Layout from '../components/layout/layout'
-import Landing from '../components/landing/landing'
+import { Layout } from '../components/layout/layout'
+import { Landing } from '../components/landing/Landing'
 
 import { getCurrentlyReadingBooks } from '../lib/index/index';
 

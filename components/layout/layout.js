@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
+
+import { Navbar } from '../navbar/Navbar';
 
 const name = 'Pablo García Egido'
 export const siteTitle = 'Pablo García Egido. Frontend developer'
 
-export default function Layout({ children }) {
+export const Layout = ({ children }) => {
   return (
     <div className="container">
 
@@ -21,17 +22,9 @@ export default function Layout({ children }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
-        <div>
-          <ul>
-            <li><Link href="/"><a>Home</a></Link></li>
-            <li><Link href="/about"><a>About</a></Link></li>
-            <li><Link href="/portfolio"><a>Portfolio</a></Link></li>
-            <li><Link href="/blog"><a>Blog</a></Link></li>
-            <li><Link href="/contact"><a>Contact</a></Link></li>
-          </ul>
-        </div>
-      </header>
+
+      <Navbar />
+      
 
       <main>{children}</main>
     </div>
