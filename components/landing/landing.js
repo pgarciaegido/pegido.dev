@@ -7,7 +7,7 @@ const h1SpecialStyles = {
   fontFamily: "'Patua One', cursive"
 }
 
-export const Landing = ({t}) => (
+export default ({t}) => (
   <> 
     {/* GREEN BACKGROUND */}
     <div className="bg-green-200 w-full absolute top-0 left-0" style={greenBgSpecialStyles}></div>
