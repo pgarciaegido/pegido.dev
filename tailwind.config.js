@@ -12,7 +12,9 @@ module.exports = {
     },
     extend: {
       colors: {
-
+        green: {
+          '200': '#E5F7F3'
+        }
       },
       margin: {
 

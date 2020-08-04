@@ -5,7 +5,7 @@ import { Navbar } from '../navbar/Navbar';
 const name = 'Pablo García Egido'
 export const siteTitle = 'Pablo García Egido. Frontend developer'
 
-export const Layout = ({ children }) => {
+export default ({ children }) => {
   return (
     <div className="container">
 
