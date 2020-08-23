@@ -8,11 +8,9 @@ export default function Home({books = []}) {
   return (
     <Layout> 
       <Head>
-        <title>Pablo G. Egido. Javascript Developer</title>
+        <title>Pablo Egido. Frontend Engineer</title>
       </Head>
-      <Landing />
-
-      {books.map((book, index) => <p key={index}>{book.name} {book.author}</p>) }
+      <Landing books={books}/>
     </Layout>
   )
 }

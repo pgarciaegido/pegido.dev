@@ -1,21 +1,17 @@
-const greenBgSpecialStyles = {
-  zIndex: -1,
-  height: '280px'
-}
+import styles from './landing.module.css';
+import BookCard from '../bookCard/bookCard';
 
-const h1SpecialStyles = {
-  fontFamily: "'Patua One', cursive"
-}
+export default ({books = []}) => (
+  <div className={styles.landing}>
+    <div>
+      <p className={styles.name}>Pablo Egido</p>
+      <p className={styles.title}>Frontend Engineer</p>
+      <p className={styles.text}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </div>
+    <div>
+      <p className={styles.currentlyReadingTitle}>Currently Reading</p>
 
-export default ({t}) => (
-  <> 
-    {/* GREEN BACKGROUND */}
-    <div className="bg-green-200 w-full absolute top-0 left-0" style={greenBgSpecialStyles}></div>
-    <h1 className="text-5xl pt-24 mb-8" style={h1SpecialStyles}>¡Hola!</h1>
-
-    <p className="text-lg w-1/4 mb-8 leading-loose">
-    I’m Pablo, Software engineer. I love creating beautiful and blazing fast websites and all things Javascript. Some more copy here and there. Que quede bonico.
-    </p>
-    <p className="text-purple-500 text-lg font-semibold cursor-pointer">Checkout my work</p>
-  </>
+      {books.map((book, index) => <BookCard key={index} book={book} />) }
+    </div>
+  </div>    
 );

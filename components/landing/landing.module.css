@@ -1,0 +1,31 @@
+.landing{
+  display: grid;
+  grid-template-columns: 3fr minmax(0, 1fr);
+  padding-top: 260px;
+  grid-gap: 50px;
+}
+
+.name{
+  font-family: 'Patua One';
+  font-size: 36px;
+  margin-bottom: -10px;
+}
+
+.title{
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.text{
+  font-size: 21px;
+  font-weight: 300;
+
+}
+
+.currentlyReadingTitle{
+  font-family: 'Patua One';
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 30px;
+}
