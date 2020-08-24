@@ -6,7 +6,7 @@ import { getCurrentlyReadingBooks } from '../lib/index/index';
 
 export default function Home({books = []}) {
   return (
-    <Layout> 
+    <Layout>
       <Head>
         <title>Pablo Egido. Frontend Engineer</title>
       </Head>

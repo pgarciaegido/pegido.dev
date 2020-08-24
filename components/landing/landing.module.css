@@ -1,7 +1,7 @@
 .landing{
   display: grid;
   grid-template-columns: 3fr minmax(0, 1fr);
-  padding-top: 260px;
+  padding: 260px 0 50px 0;
   grid-gap: 50px;
 }
 
@@ -28,4 +28,39 @@
   font-size: 21px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
+}
+
+.contactSection{
+  text-align: center;
+}
+
+.contactSectionTitle{
+  font-size: 18px;
+  font-family: 'Patua One';
+  margin-bottom: 20px;
+}
+
+.iconsContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icon:not(:last-child){
+  margin-right: 20px;
+}
+
+.icon:hover{
+  transform: scale(1.1);
 }
