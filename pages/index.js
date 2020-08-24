@@ -15,7 +15,7 @@ export default function Home({books = []}) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const books = await getCurrentlyReadingBooks()
 
   return {
