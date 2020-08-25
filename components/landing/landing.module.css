@@ -32,7 +32,8 @@
 
 .contact{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   margin-top: 50px;
 }
 
@@ -63,4 +64,17 @@
 
 .icon:hover{
   transform: scale(1.1);
+}
+
+.resume{
+  font-family: 'Patua One';
+  font-size: 18px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 40px;
+  transition: 0.3s;
+}
+
+.resume:hover{
+  box-shadow: 0 0 19px 0 rgba(0,0,0,0.15);
 }
