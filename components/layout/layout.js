@@ -1,19 +1,11 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import styles from './layout.module.css';
 
-const diagonalStyles = {
-  width: '100%',
-  height: '750px',
-  backgroundColor: '#E5F7F3',
-  transform: 'skewY(12deg)',
-  position: 'absolute',
-  top: '-400px',
-  zIndex: '-1'
-};
 
 export default ({ children }) => {
   return (
     <>
-      <div style={diagonalStyles}></div>
+      <div className={styles.diagonal}></div>
 
       <div className="container">
 

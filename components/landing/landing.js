@@ -54,12 +54,12 @@ export default ({books = []}) => {
             </div>
           </div>
 
-          <div>
+          <div className={styles.resumeContainer}>
             <a className={styles.resume} href="/cv_pablo_egido_2020.pdf" target="_blank">Download Resumé</a>
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.currentlyReading}>
         <p className={styles.currentlyReadingTitle}>Currently Reading</p>
   
         {books.map((book, index) => <BookCard key={index} book={book} />) }

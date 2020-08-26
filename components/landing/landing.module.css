@@ -1,7 +1,7 @@
 .landing{
   display: grid;
   grid-template-columns: 3fr minmax(0, 1fr);
-  padding: 260px 0 50px 0;
+  padding: 260px 30px 50px 30px;
   grid-gap: 50px;
 }
 
@@ -20,7 +20,6 @@
 .text{
   font-size: 21px;
   font-weight: 300;
-
 }
 
 .currentlyReadingTitle{
@@ -77,4 +76,44 @@
 
 .resume:hover{
   box-shadow: 0 0 19px 0 rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1030px) {
+  .landing{
+    display: block;
+  }
+  .currentlyReading{
+    display: none;
+  }
+}
+
+@media (max-width: 775px){
+  .contact{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resumeContainer{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    justify-self: center;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 500px){
+  .landing{
+    padding-top: 100px;
+  }
+
+  .name{
+    font-size: 30px;
+  }
+
+  .title{
+    font-size: 40px;
+  }
+
+  .text{
+    font-size: 16px;
+  }
 }
