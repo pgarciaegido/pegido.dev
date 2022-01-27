@@ -55,7 +55,7 @@ export default ({books = []}) => {
           </div>
 
           <div className={styles.resumeContainer}>
-            <a className={styles.resume} href="/cv_pablo_egido_2020.pdf" target="_blank">Download Resumé</a>
+            <a className={styles.resume} href="/cv_2022.pdf" target="_blank">Download Resumé</a>
           </div>
         </div>
       </div>
